@@ -4,10 +4,10 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Github, Linkedin, FileText, Mail } from 'lucide-react'
 
-export default function Footer() {
+export default function Footer({id}) {
   return (
-    <footer className="bg-[#1c1c1c] border-t border-gray-700">
-      <div className="px-10 py-8">
+    <footer id={id} className="bg-[#1c1c1c] border-t border-gray-700">
+      <div className="px-6 sm:px-10 py-8">
         {/* Contact Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -19,8 +19,8 @@ export default function Footer() {
             Contact Me!
           </h3>
 
-          <div className="flex justify-center gap-6">
-            {/* GitHub */}
+          {/* Social Links */}
+          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 items-center">
             <a
               href="https://github.com/BlazeGaming456"
               target="_blank"
@@ -31,7 +31,6 @@ export default function Footer() {
               GitHub
             </a>
 
-            {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/ajin-chundakkattu-raju/"
               target="_blank"
@@ -42,7 +41,6 @@ export default function Footer() {
               LinkedIn
             </a>
 
-            {/* Resume */}
             <a
               href="/resume.pdf"
               download
@@ -52,7 +50,6 @@ export default function Footer() {
               Resume
             </a>
 
-            {/* Email */}
             <a
               href="mailto:ajincraju@gmail.com"
               className="flex items-center gap-2 text-white hover:text-[#00f5a0] transition-colors duration-300"

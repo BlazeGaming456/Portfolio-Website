@@ -3,7 +3,7 @@ import { Typewriter } from 'react-simple-typewriter'
 import CodeEditor from '@/components/CodeEditor'
 import Image from 'next/image'
 
-const Hero = () => {
+const Hero = ({id}) => {
   const [code, setCode] = React.useState(`> Ajin.location
 "Pullad, Pathanamthitta, Kerala"
 
@@ -23,7 +23,7 @@ const Hero = () => {
 ["Next.js", "C++", "Python"]`)
 
   return (
-    <div className='bg-[#1c1c1c] pt-26'>
+    <div id={id} className='bg-[#1c1c1c] pt-26'>
       {/* Main Section */}
       <div className='pb-28 max-w-6xl mx-auto flex flex-col md:flex-row items-center px-6'>
         {/* Left Text Section */}
@@ -92,14 +92,15 @@ const Hero = () => {
       {/* Code Editor */}
       <div className='bg-white pt-12'>
         <h1 className='text-center text-3xl font-mono font-bold text-black hover:text-[#00f5a0] transition-all duration-300'>About Me</h1>
-        <div className='min-w-full max-w-xl mx-auto mt-8 px-64'>
-          <CodeEditor
-            language='javascript'
-            code={code}
-            setCode={setCode}
-            readOnly={true}
-          />
-        </div>
+        <div className='w-full max-w-xl mx-auto mt-8 px-4 sm:px-6 lg:px-0'>
+  <CodeEditor
+    language='javascript'
+    code={code}
+    setCode={setCode}
+    readOnly={true}
+  />
+</div>
+
       </div>
     </div>
   )

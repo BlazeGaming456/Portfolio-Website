@@ -12,10 +12,10 @@ const page = () => {
     <div className="">
       <Navbar />
       <div className="min-w-screen">
-        <Hero />
-        <Projects />
+        <Hero id='aboutme' />
+        <Projects id='projects' />
       </div>
-      <Footer />
+      <Footer id='contact' />
     </div>
   );
 };

@@ -43,9 +43,9 @@ const projects = [
   }
 ]
 
-const Projects = () => {
+const Projects = ({id}) => {
   return (
-    <div className="pt-16 pb-16 bg-white">
+    <div id={id} className="pt-16 pb-16 bg-white">
       <h1 className="pb-10 text-4xl text-center font-mono font-bold text-black hover:text-[#00f5a0] transition-all duration-300">
         My Projects
       </h1>
