@@ -3,6 +3,13 @@ import Image from 'next/image'
 
 const projects = [
   {
+    title: 'FinGuard',
+    description: 'A personal finance management app that uses ML for financial forecasting, simulation and analysis.',
+    image: '/finguard.png',
+    tech: ['Next.js', 'Tailwind CSS', 'Prophet', 'Recharts', 'PostgreSQL'],
+    link: 'https://github.com/BlazeGaming456/FinGuard'
+  },
+  {
     title: 'Skill Slate',
     description:
       'A modern full-stack web app that empowers developers and tech professionals to generate, improve, and optimize resumes and cover letters using AI. Features ATS analysis, job match scoring, and more.',
